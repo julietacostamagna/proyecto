@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #403f40;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+.imgCarrusel {
+    height: 500px;
+    object-fit: cover;
+}
