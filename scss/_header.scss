@@ -1,68 +1,75 @@
-header {
-	text-align: center;
-	padding: 10px 20px;
+nav {
 	background-color: $colorrosa;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
 	box-shadow: 0px 0px 10px #5b5b5b;
+	text-transform: uppercase;
 
-	nav {
-		ul {
-			list-style: none;
-			display: flex;
-			align-items: last baseline;
-			flex-wrap: wrap;
-			text-align: end;
-			text-align: center;
-			justify-content: center;
+	label {
+		display: none;
+		color: #404040;
+		font-size: 1.5rem;
+		cursor: pointer; 
+	}
+}
 
-			li {
-				display: inline-block;
-				margin: 0 10px;
-
-				a {
-					text-decoration: none;
-					text-transform: uppercase;
-					font-weight: bold;
-					color: #403f40;
-				}
-			}
-		}
-
-		li {
-			a {
-				img {
-					width: 50%;
-				}
-			}
-		}
-
-		svg {
-			display: none;
+.logo {
+	a {
+		img {
+			width: 90px;
 		}
 	}
 }
 
-@media screen and (max-width: 760px) {
-	nav {
-		ul {
-			display: none !important;
-		}
+#menu-toggle {
+	display: none;
+}
 
-		li {
-			a {
-				img {
-					width: 30% !important;
-				}
-			}
-		}
+.links {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
 
-		svg {
-			display: flex !important;
-			cursor: pointer;
+	li {
+		margin-right: 20px;
+	}
 
-			&:targer {
-				nav {
-					ul {
-						display: flex !important;
+	a {
+		text-decoration: none;
+		color: #404040;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu-icon {
+		display: block;
+	}
+
+	.links {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+	}
+
+	#menu-toggle {
+		&:checked {
+			+nav {
+				.links {
+					padding: 2rem 0 2rem 0;
+					background-color: rgb(226, 87, 255)!important;
+					text-align: end;
+					display: flex;
+					z-index: 1;
+					margin-top: 2rem; 
+					li{
+						margin-top: 3px;
 					}
 				}
 			}
